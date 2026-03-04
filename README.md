@@ -365,9 +365,9 @@ requirements.txt
 
 Public lending datasets used for modeling.
 
-* Home Credit Default Risk
-* LendingClub Loan Data
-* Give Me Some Credit
+* Home Credit Default Risk - primary credit risk modeling dataset.
+* LendingClub Loan Data - strategy simulation and portfolio analysis.
+* Give Me Some Credit - fraud/anomaly style modeling and risk signals.
 
 These datasets provide structured borrower information for credit risk modeling.
 
