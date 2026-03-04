@@ -325,6 +325,9 @@ notebooks/
 01_data_preprocessing.ipynb
 02_credit_risk_model.ipynb
 03_fraud_detection.ipynb
+04_expected_loss_capital_model.ipynb
+05_strategy_simulator.ipynb
+06_stress_testing.ipynb
 
 models/
 trained ML models
@@ -345,7 +348,7 @@ bias_monitor.py
 explainability.py
 
 dashboard/
-final_bfsi_project_command_center_v3.py
+command_center.py
 
 docs/
 architecture_diagram.png
