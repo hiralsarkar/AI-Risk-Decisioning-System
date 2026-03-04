@@ -22,50 +22,99 @@ The platform integrates:
 * Responsible AI governance
 * Portfolio monitoring dashboards
 
----
-
-# 🎥 Demo
-
-```
-docs/demo.gif
-```
-
-![Dashboard Demo](docs/demo.gif)
 
 ---
 
 # 🏗 System Architecture
 
+```
+Enterprise Lending Risk Decision Architecture
+```
+
 ```mermaid
 flowchart TD
 
-A[Loan Application Data]
+subgraph Data_Layer["Data Layer"]
+A1[Loan Applications]
+A2[Credit Bureau Data]
+A3[Customer Financial Data]
+A4[Transaction Data]
+end
 
-A --> B[Feature Engineering]
-B --> C[Credit Risk Model]
-B --> D[Fraud Detection Model]
+subgraph Data_Processing["Data Processing & Feature Engineering"]
+B1[Data Cleaning]
+B2[Feature Engineering]
+B3[Feature Store]
+end
 
-C --> E[PD Score]
-D --> F[Fraud Risk Score]
+subgraph Risk_Modeling["Risk Modeling Layer"]
+C1[Credit Risk Model<br>PD Estimation]
+C2[Fraud Detection Model]
+end
 
-E --> G[Expected Loss Engine]
-F --> H[Fraud Risk Filter]
+subgraph Financial_Intelligence["Financial Intelligence Layer"]
+D1[Expected Loss Engine<br>PD × LGD × EAD]
+D2[Capital Modeling<br>RWA Simulation]
+D3[RAROC Engine]
+end
 
-G --> I[Capital Modeling]
-I --> J[RAROC Engine]
+subgraph Strategy_Layer["Strategy & Optimization"]
+E1[Strategy Simulator]
+E2[Risk-Based Pricing]
+E3[Portfolio Optimization]
+end
 
-J --> K[Strategy Simulator]
+subgraph Decision_Layer["Decision Engine"]
+F1[Approval Rules]
+F2[Reject Rules]
+F3[Manual Review Queue]
+end
 
-K --> L[Decision Engine]
+subgraph Governance["Responsible AI Governance"]
+G1[Explainability<br>SHAP]
+G2[Bias Monitoring]
+G3[Policy Compliance]
+end
 
-L --> M[Approve]
-L --> N[Reject]
-L --> O[Manual Review]
+subgraph Monitoring["Monitoring & Analytics"]
+H1[Model Drift Monitoring]
+H2[Performance Tracking]
+H3[Portfolio Risk Dashboard]
+end
 
-L --> P[Explainability Layer]
-P --> Q[Governance & Bias Monitoring]
+A1 --> B1
+A2 --> B1
+A3 --> B1
+A4 --> B1
 
-Q --> R[Monitoring Dashboard]
+B1 --> B2
+B2 --> B3
+
+B3 --> C1
+B3 --> C2
+
+C1 --> D1
+C2 --> F1
+
+D1 --> D2
+D2 --> D3
+
+D3 --> E1
+E1 --> E2
+E2 --> E3
+
+E3 --> F1
+
+F1 --> F2
+F1 --> F3
+
+F1 --> G1
+G1 --> G2
+G2 --> G3
+
+F1 --> H1
+H1 --> H2
+H2 --> H3
 ```
 
 ---
