@@ -318,10 +318,10 @@ streamlit run final_bfsi_project_command_center_v3.py
 ```
 ai-risk-decisioning-system
 
-data/
+01_data/
 datasets used for training models
 
-notebooks/
+02_notebooks/
 01_data_preprocessing.ipynb
 02_credit_risk_model.ipynb
 03_fraud_detection.ipynb
@@ -329,28 +329,28 @@ notebooks/
 05_strategy_simulator.ipynb
 06_stress_testing.ipynb
 
-models/
+03_models/
 trained ML models
 
-financial_engine/
+04_financial_engine/
 expected_loss.py
 capital_model.py
 raroc_engine.py
 
-decision_engine/
+05_decision_engine/
 approval_rules.py
 
-stress_testing/
+06_stress_testing/
 stress_simulator.py
 
-governance/
+07_governance/
 bias_monitor.py
 explainability.py
 
-dashboard/
+08_dashboard/
 command_center.py
 
-docs/
+09_docs/
 architecture_diagram.png
 demo.gif
 
