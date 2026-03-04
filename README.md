@@ -332,7 +332,7 @@ datasets used for training models
 03_models/
 trained ML models
 
-04_financial_engine/
+04_financial_intelligence/
 expected_loss.py
 capital_model.py
 raroc_engine.py
@@ -347,7 +347,7 @@ stress_simulator.py
 bias_monitor.py
 explainability.py
 
-08_dashboard/
+08_risk_command_centre/
 command_center.py
 
 09_docs/
