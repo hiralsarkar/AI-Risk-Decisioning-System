@@ -1,4 +1,5 @@
 # 📊 AI Risk Decisioning System
+## Enterprise Lending Risk Platform Simulation
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-XGBoost-orange)
